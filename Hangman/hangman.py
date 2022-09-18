@@ -36,7 +36,6 @@ missing_word = regex.sub(consonant_or_vowel[randint(0,1)], '#', word_of_the_day.
 letter_stack = []
 
 print(f"Guess the letter of {missing_word}")
-print(f"{word_of_the_day}")
 while(missing_word.lower() != word_of_the_day.lower()):
     print(f"{missing_word}")
     guess_letter =  input("Input here: ")[0]
@@ -64,26 +63,3 @@ while(missing_word.lower() != word_of_the_day.lower()):
 
 if(lives > 0): print(f"Congratulations!, you have answered all the letters of {word_of_the_day}")
 else: print("Sorry, you have lose all your lives. Just keep practicing!")
-
-
-# for word in words:
-#     # Pick either vowel or consonant sets to replace with _
-#     missing_word = regex.sub(consonant_or_vowel[randint(0,1)], ' _ ', word.lower())
-#     print(f"Next word: {missing_word}")
-#     # Ask the user to guess the word
-#     guess = input()
-
-#     # Ask the user to guess different word
-#     while(guess.lower() != word.lower()):
-#         # Print out the lives remaining
-#         print("".join(hangman_list[0:(hangman_count-lives)+1]))
-
-#         lives -= 1
-#         if(lives == 0): break
-
-#         guess = input("Sorry, guess another word: ")
-
-#     if(lives == 0): break
-
-# if(lives > 0): print(f"Congratulations!, you have answered all {words_length} guess words")
-# else: print("Sorry, you have lose all your lives. Just keep practicing!")
