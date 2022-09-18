@@ -28,7 +28,7 @@ words_length = len(words)
 
 consonant_or_vowel = ["[aeiou]", "[b-d]|[f-h]|[j-n]|[p-t]|[v-z]"]
 
-# print(figlet_format("WELCOME TO HANGMAN"))
+print(figlet_format("WELCOME TO HANGMAN"))
 
 word_of_the_day = words[randint(0, words_length-1)]
 missing_word = regex.sub(consonant_or_vowel[randint(0,1)], '#', word_of_the_day.lower())
