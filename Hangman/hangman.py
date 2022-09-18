@@ -38,26 +38,27 @@ letter_stack = []
 print(f"Guess the letter of {missing_word}")
 while(missing_word.lower() != word_of_the_day.lower()):
     print(f"{missing_word}")
-    guess_letter =  input("Input here: ")[0]
+    guess_letter =  input("Input here: ")[0].lower()
 
-    if (not guess_letter.lower() in word_of_the_day.lower()):
-        if(not guess_letter.lower() in letter_stack):
-            lives -= 1
+    if (not guess_letter in word_of_the_day.lower()):
+        if(not guess_letter in letter_stack):
             print("".join(hangman_list[0:(hangman_count-lives)+1]))
-            letter_stack.append(guess_letter.lower())
+            lives -= 1
+            
+            letter_stack.append(guess_letter)
             print("Sorry, incorrect letter")
         else:
             print("letter is already inputted")
     else:
-        if(not guess_letter.lower() in letter_stack):
+        if(not guess_letter in letter_stack):
             temp = ""
             for i in range(len(word_of_the_day)):                
-                if(guess_letter.lower() == word_of_the_day[i].lower()):
-                    temp += guess_letter.lower()
+                if(guess_letter == word_of_the_day[i].lower()):
+                    temp += guess_letter
                 else:
                     temp += missing_word[i].lower()
             missing_word = temp
-            letter_stack.append(guess_letter.lower())
+            letter_stack.append(guess_letter)
 
     if(lives == 0): break
 
