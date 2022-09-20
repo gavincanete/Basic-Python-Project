@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>334</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>0</y>
+      <width>191</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>19</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>Cipher Program</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="encryption_input">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>50</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="cipher_button">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>100</y>
+      <width>201</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Encrypt</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="decryption_input">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>150</y>
+      <width>261</width>
+      <height>41</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="decipher_button">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>200</y>
+      <width>201</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Decrypt</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>440</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
