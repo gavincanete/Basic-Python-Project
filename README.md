@@ -12,3 +12,9 @@ cd Hangman/
 python hangman.py
 ```
 <i>Note: should include the candidate_words.txt upon running the app</i>
+
+<strong>Running the Cipher App</strong>
+```
+cd EncryptionProgram/
+python cipher_app.py
+```
