@@ -9,9 +9,8 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-from string import ascii_lowercase, ascii_uppercase
-from random import randint, sample
 import pyperclip as clipper
+import PasswordGenerator as Generator
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -62,11 +61,8 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         # Used to generate a password
-        self.special_chars = "!#$%&"
-        self.digits = "0123456789"
-        self.letters_lowercase = list(ascii_lowercase)
-        self.letters_uppercase = list(ascii_uppercase)
-        self.numbers = list("0123456789")
+        self.generator = Generator.PasswordGenerator()
+        print(self.generator)
 
         self.generate_btn.clicked.connect(self.generate_password)
         self.copy_btn.clicked.connect(self.copy_password)
@@ -83,24 +79,8 @@ class Ui_MainWindow(object):
         self.result_text.setText(_translate("MainWindow", "Clipboard copied!!"))
 
     def generate_password(self):
-        num = int(self.size_input.text())
-        #Make no of characters divisible by 4
-        num = num if num % 4 == 0 else num+(4 - num%4)
-        print(num)
-
-        # Generate number of repetition for each category  
-        repeater = int(num/4)
-
-        random_special_char = self.special_chars[randint(0,4)]*repeater
-        random_lowercase = self.letters_lowercase[randint(0,25)]*repeater
-        random_uppercase = self.letters_uppercase[randint(0,25)]*repeater
-        random_numbers = self.numbers[randint(0,9)]*repeater
-
-        base_password = list(random_special_char+random_lowercase+random_uppercase+random_numbers)
-        password_generated = sample(base_password, k=num)
-
-
-        self.password_text.setText("".join(password_generated))
+        generated_password = self.generator.make_password(int(self.size_input.text()))        
+        self.password_text.setText(generated_password)
         self.copy_btn.setEnabled(True)
 
     def copy_password(self):
