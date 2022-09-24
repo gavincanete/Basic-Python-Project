@@ -87,8 +87,7 @@ class Ui_MainWindow(object):
         clipper.copy(self.password_text.text())
         self.result_text.setEnabled(True)
 
-    def monitor_characters(self, _):
-        print(self.size_input.text())
+    def monitor_characters(self, _):        
         if(self.size_input.text() == ""):
             self.generate_btn.setEnabled(False)
             self.copy_btn.setEnabled(False)
