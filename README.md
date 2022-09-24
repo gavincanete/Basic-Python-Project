@@ -1,10 +1,11 @@
 # Basic-Python-Project
 List of Simple Applications using Python
 
-<strong>Hangman Game Prerequisite</strong><br>
+<strong>Programs Prerequisite</strong><br>
 Add this following command:
 ```
-pip install pyfiglet
+pip install pyfiglet (For Hangman)
+pip install pyperclip (For Password Gen)
 ```
 <strong>Running the Hangman Game</strong>
 ```
@@ -17,4 +18,10 @@ python hangman.py
 ```
 cd EncryptionProgram/
 python cipher_app.py
+```
+
+<strong>Running the Password Generator</strong>
+```
+cd PasswordGenerator/
+python password_generator_app.py
 ```
