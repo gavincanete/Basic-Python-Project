@@ -25,3 +25,25 @@ python cipher_app.py
 cd PasswordGenerator/
 python password_generator_app.py
 ```
+<strong>Prerequisite for Addressbook</strong>
+```
+SQL Knowledge for setting up
+(1) Must have Mysql
+(2) Required Table:
+|__Fields____ |_____Type___ |
+|ID           |int          |
+|firstName    |varchar(255) |
+|middleInitial|varchar(2)   |
+|lastName     |varchar(255) |
+|address      |varchar(255) |
+```
+<strong>Running the Addressbook</strong>
+(3) Change the credential under 
+./AddressBook/address_book.py 
+locate Class AddressBookDB()
+locate __init__ function
+change the root password (****) to your appropriate password
+```
+cd AddressBook/
+python address_book_app.py
+```
