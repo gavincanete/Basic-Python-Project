@@ -36,13 +36,14 @@ SQL Knowledge for setting up
 |middleInitial|varchar(2)   |
 |lastName     |varchar(255) |
 |address      |varchar(255) |
-```
-<strong>Running the Addressbook</strong>
+
 (3) Change the credential under 
 ./AddressBook/address_book.py 
 locate Class AddressBookDB()
 locate __init__ function
 change the root password (****) to your appropriate password
+```
+<strong>Running the Addressbook</strong>
 ```
 cd AddressBook/
 python address_book_app.py
