@@ -3,7 +3,7 @@ from mysql.connector import Error
 
 class AddressBookDB():    
     def __init__(self):
-        self.connection = self.create_connection('localhost', 'root', '$gameDeveloper97', 'basic_db')
+        self.connection = self.create_connection('localhost', 'root', '****', 'basic_db')
         select_last_record = "select ID from address_book order by id desc limit 1"
         last_record = self.execute_read_query(select_last_record)
 
