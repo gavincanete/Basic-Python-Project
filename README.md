@@ -38,7 +38,7 @@ SQL Knowledge for setting up
 |address      |varchar(255) |
 
 (3) Change the credential under 
-./AddressBook/address_book.py 
+./AddressBook/address_book_db.py 
 locate Class AddressBookDB()
 locate __init__ function
 change the root password (****) to your appropriate password
